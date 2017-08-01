@@ -170,22 +170,33 @@ $pattern1='/(?>\w+)a/';
 $pattern2='/\w+a/';
 $rs=preg_match($pattern1, $str);//0
 $rs=preg_match($pattern2, $str);//1
+
+---------------------------------------------------------
+
 php中其他常用字符串操作函数
 
 字符串截取截取 
 string substr ( string string,intstart [, int length])stringmbsubstr(stringstr , int start[,intlength = NULL [, string $encoding = mb_internal_encoding() ]] )
+---------------------------------------------------------
+
 字符串中大小写转换 
 strtoupper 
 strtolower 
 ucfirst 
 ucwords
+---------------------------------------------------------
+
 字符串比较 
 -strcmp、strcasecmp、strnatcmp
 字符串过滤
 字符串翻转 
 strrev($str);
+---------------------------------------------------------
+
 字符串随机排序 
 string str_shuffle ( string $str )
+---------------------------------------------------------
+
 补充
 怎样进行邮箱匹配，url匹配，手机匹配
 使用preg_match函数进行匹配，以下内容从TP中复制而来。 
@@ -195,6 +206,7 @@ url匹配
 pattern='/^http(s?):\/\/(?:[A-za-z0-9-]+\.)+[A-za-z]{2,4}(:\d+)?(?:[\/\?#][\/=\?%\-&~`@[\]\':+!\.#\w]*)?/’; 
 手机验证 
 pattern=′/1[3458]\d10/’;
+---------------------------------------------------------
 
 php中正则的优缺点
 php中正则在某些时候，能帮我们解决php函数很多困难的匹配或是替换。然后php中正则的效率，往往是我们需要考虑的，所以在某些时候，能不用正则还是尽量不去用它，除非，某些场合必须用到，或是我们能够有效减少其回溯次数。
